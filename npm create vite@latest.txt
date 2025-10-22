@@ -1,0 +1,66 @@
+npm create vite@latest
+
+this will run a dialog to create a react project from scratch. Example:
+
+
+---
+
+admin@JacBook react1 % npm create vite@latest
+Need to install the following packages:
+create-vite@8.0.2
+Ok to proceed? (y) y
+
+
+> npx
+> create-vite
+
+│
+◇  Project name:
+│  react1
+│
+◇  Select a framework:
+│  React
+│
+◇  Select a variant:
+│  JavaScript
+│
+◇  Use rolldown-vite (Experimental)?:
+│  No
+│
+◇  Install with npm and start now?
+│  Yes
+│
+◇  Scaffolding project in /Users/admin/Software/Webdev/_projects/react1/react1...
+│
+◇  Installing dependencies with npm...
+
+added 152 packages, and audited 153 packages in 13s
+
+32 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+│
+◇  Starting dev server...
+
+> react1@0.0.0 dev
+> vite
+
+
+  VITE v7.1.10  ready in 255 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+^C
+------------
+
+Once this is done, open the src folder in Visual Studio 
+
+Open a terminal window in VS
+
+cd ../
+
+npm run dev
+
+this will allow you to run the web server right in VS instead of in a terminal window
