@@ -6,7 +6,6 @@ export default function App() {
         <>
           <Navbar />
           <Main />
-          <h1>App component here</h1>
         </>
         
     )

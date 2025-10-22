@@ -1,3 +1,5 @@
+
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -11,6 +13,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --paddingAmount: 1.5em;
+  --reactLogoColor: #00d8ff;
+  --imageURLlogo: url("assets/react.svg");
 }
 
 a {
@@ -28,6 +34,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  justify-content: center;
 }
 
 h1 {
@@ -65,4 +72,58 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+#root {
+  border: 2px white solid;
+  border-radius: 1em;
+  overflow: hidden;
+  background-color: #282d35;
+}
+
+#navbar, #mainSection {
+  padding: var(--paddingAmount);
+}
+
+#navbar {
+  background-color: #1b1c21;
+}
+
+#navbar nav {
+  align-items: center;
+  display: flex;
+  gap: 0.25em;
+
+  color: var(--reactLogoColor);
+  font-weight: 700;
+  font-size: large;
+}
+
+.logo {
+  height: 20px;
+}
+
+#mainSection h2 {
+  margin-top: 0;
+  font-size: 32px;
+}
+
+#mainSection ul {
+  padding-left: 1em;
+}
+
+li::marker {
+  color: var(--reactLogoColor);
+  font-size: 1.25em;
+}
+
+li + li {
+  margin-top: 0.25em;
+}
+
+#mainSection {
+  background-image: var(--imageURLlogo);
+  background-repeat: no-repeat;
+  background-position: 122.5%;
+  background-size: 30%;
 }
