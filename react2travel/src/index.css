@@ -1,3 +1,40 @@
+/* ---------------------- */
+/* Fonts                  */
+/* ---------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+/* ---------------------- */
+/* Custom properties      */
+/* ---------------------- */
+
+:root {
+  --fontMain: "Inter", sans-serif;
+}
+
+/* ---------------------- */
+/* Styling                */
+/* ---------------------- */
+
+html, body {
+    margin: 0;
+    font-family: var(--fontMain);
+}
+
+header {
+  background-color: #f55a5a;
+  color: white;
+  padding: 1em;
+}
+
+header div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+/*
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -66,3 +103,4 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+*/
