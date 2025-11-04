@@ -21,6 +21,10 @@ html, body {
     font-family: var(--fontMain);
 }
 
+body {
+  background-color: #e5e5e5;
+}
+
 header {
   background-color: #f55a5a;
   color: white;
@@ -32,6 +36,37 @@ header div {
   justify-content: center;
   align-items: center;
   gap: 1em;
+}
+
+
+
+/* ---------------------- */
+/* Entry                */
+/* ---------------------- */
+
+.EntryRoot {
+  background-color: white;
+}
+
+.EntryContentGrid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2em;
+  padding: 2em;
+}
+
+.EntryLeftImageContainer {
+  aspect-ratio: 3 / 4;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 1em;
+
+  display:flex;
+  justify-content: center;
+}
+
+.EntryLeftImageContainer img {
+  height: 100%;
 }
 
 /*
