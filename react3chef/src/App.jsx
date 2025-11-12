@@ -1,4 +1,5 @@
 import Header from './components/Header.jsx'
+import IngredientForm from './components/IngredientForm.jsx'
 
 /**
  * Challenge: Build the Header component in a separate file
@@ -8,7 +9,10 @@ import Header from './components/Header.jsx'
 export default function App() {
   return (
       <>
-        <Header />
+        <div className="contentRoot">
+          <Header />
+          <IngredientForm />
+        </div>
       </>
   )
 }

@@ -5,6 +5,21 @@
 body {
     margin: 0;
     font-family: Inter, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    background-color: rgb(236, 236, 236);
+}
+
+#root {
+  flex-grow: 1;
+  max-width: 800px;
+}
+
+.contentRoot {
+  padding-top: 3em;
+  width: 100%;
+  flex-grow: 1;
 }
 
 /**
@@ -12,6 +27,9 @@ header box shadow code:
 box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
 */
 
+/*
+HEADER
+*/
 
 .headerContent {
   display: flex;
@@ -19,7 +37,7 @@ box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0
   align-items: center;
   gap: 1em;
   background-color: white;
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.35);
 }
 
 .headerContent img {
@@ -29,4 +47,46 @@ box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0
 .headerContent h1 {
   font-weight: 400;
   padding-top: 6px;
+}
+
+
+/*
+INPUT FORM
+*/
+
+.formContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 3em;
+  background-color: rgb(248, 248, 248);
+}
+
+.formInputRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  width: 100%;
+}
+
+.formContent input {
+  border-radius: 0.5em;
+  border: 1px solid silver;
+  padding: 1em;
+  flex-grow: 1;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.formContent button {
+  background-color: rgb(21, 21, 21);
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+  padding: 1em;
+
+  font-size: 0.875rem;
+  font-weight: 500;
 }
