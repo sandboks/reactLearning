@@ -35,9 +35,9 @@ export default function Entry(props) {
                                 <img src={imgLocationMarker}></img>
                                 <span>{props.country}</span>
                             </div>
-                            <span><a href={props.mapsUrl}>View on Google maps</a></span>
+                            <span><a href={props.mapsUrl} target="_blank">View on Google maps</a></span>
                         </div>
-                        <h1>Mount Fuji</h1>
+                        <h1>{props.title}</h1>
                         <span class="dateSpan">{props.dates}</span>
                         <p class="entryBlurb">{props.blurb}</p>
                     </div>
