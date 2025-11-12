@@ -19,27 +19,29 @@ import imgLocationMarker from '../assets/marker.png';
 let imgurl = "https://scrimba.com/links/travel-journal-japan-image-url";
 
 export default function Entry(props) {
+    const entry = props.entry;
+    
     return (
         <>
-            <article class="EntryRoot">
-                <div class="EntryContentGrid">
-                    <div class="EntryLeftImageContainer">
+            <article className="EntryRoot">
+                <div className="EntryContentGrid">
+                    <div className="EntryLeftImageContainer">
                         <img 
-                            src={props.img.src} 
-                            alt={props.img.alt}
+                            src={entry.img.src} 
+                            alt={entry.img.alt}
                         />
                     </div>
-                    <div class="EntryRightColumn">
-                        <div class="countryRow">
-                            <div class="countryRow countryLocation">
+                    <div className="EntryRightColumn">
+                        <div className="countryRow">
+                            <div className="countryRow countryLocation">
                                 <img src={imgLocationMarker}></img>
-                                <span>{props.country}</span>
+                                <span>{entry.country}</span>
                             </div>
-                            <span><a href={props.mapsUrl} target="_blank">View on Google maps</a></span>
+                            <span><a href={entry.mapsUrl} target="_blank">View on Google maps</a></span>
                         </div>
-                        <h1>{props.title}</h1>
-                        <span class="dateSpan">{props.dates}</span>
-                        <p class="entryBlurb">{props.blurb}</p>
+                        <h1>{entry.title}</h1>
+                        <span className="dateSpan">{entry.dates}</span>
+                        <p className="entryBlurb">{entry.blurb}</p>
                     </div>
                 </div>
             </article>
