@@ -1,6 +1,7 @@
 import Header from './components/Header.jsx'
 import IngredientForm from './components/IngredientForm.jsx'
 import React from "react"
+import GetRecipeSection from './components/GetRecipeSection.jsx'
 
 /**
  * Challenge: Build the Header component in a separate file
@@ -9,6 +10,10 @@ import React from "react"
 
 export default function App() {
   const [ingredients, setIngredients] = React.useState([])
+
+  function haveIngredients() {
+    return (ingredients.length > 0);
+  }
 
   function addIngredient(newIngredient) {
       setIngredients(prevIngredients => [...prevIngredients, newIngredient])
@@ -22,12 +27,24 @@ export default function App() {
       <>
         <div className="contentRoot">
           <Header />
-          <IngredientForm 
-            addFunction={addIngredient}
-          />
-          <ul>
-            {ingredientsList}
-          </ul>
+          <div className='formContentRoot'>
+              <IngredientForm 
+                addFunction={addIngredient}
+              />
+              
+              {haveIngredients() && 
+                <section>
+                    <div className="ingredientsListSection">
+                        <h2>Ingredients on hand:</h2>
+                        <ul className="ingredients-list" aria-live="polite">
+                            {ingredientsList}
+                        </ul>
+                    </div>
+                    <GetRecipeSection />
+                </section>
+              }
+          </div>
+          
         </div>
       </>
   )

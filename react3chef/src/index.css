@@ -1,3 +1,8 @@
+:root {
+  --paddingH: 3em;
+  --paddingV: 2em;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -17,15 +22,14 @@ body {
 }
 
 .contentRoot {
-  padding-top: 3em;
+  margin-top: 3em;
   width: 100%;
   flex-grow: 1;
-}
+  background-color: rgb(248, 248, 248);
 
-/**
-header box shadow code:
-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
-*/
+  display: flex;
+  flex-direction: column;
+}
 
 /*
 HEADER
@@ -37,7 +41,6 @@ HEADER
   align-items: center;
   gap: 1em;
   background-color: white;
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.35);
 }
 
 .headerContent img {
@@ -47,6 +50,17 @@ HEADER
 .headerContent h1 {
   font-weight: 400;
   padding-top: 6px;
+}
+
+/*
+FORM CONTENT
+*/
+
+.formContentRoot {
+  margin: var(--paddingV) var(--paddingH);
+  gap: var(--paddingV);
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -59,7 +73,6 @@ INPUT FORM
   align-items: center;
   justify-content: center;
 
-  padding: 3em;
   background-color: rgb(248, 248, 248);
 }
 
@@ -90,4 +103,44 @@ INPUT FORM
   font-size: 0.875rem;
   font-weight: 500;
   font-family: Inter, sans-serif;
+
+  cursor: pointer;
+}
+
+/*
+GET RECIPE SECTION
+*/
+
+.get-recipe-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    background: #F0EFEB;
+    padding: 10px 28px;
+    margin-top: var(--paddingV);
+}
+
+.get-recipe-container h3 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.get-recipe-container p {
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 20px;
+}
+
+.get-recipe-container button {
+    border: none;
+    border-radius: 6px;
+    background: #D17557;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    color: #FAFAF8;
+    padding: 9px 17px;
+    font-family: Inter, sans-serif;
+    font-size: 0.875rem;
+    cursor: pointer;
 }
